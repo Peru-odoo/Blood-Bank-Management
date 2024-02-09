@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="request_blood_action" model="ir.actions.act_window">
+        <field name="name">Request Blood</field>
+        <field name="res_model">request.blood</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            No Blood Requests found!!
+          </p><p>
+            Please add some already :)
+          </p>
+        </field>
+    </record>
+</odoo>

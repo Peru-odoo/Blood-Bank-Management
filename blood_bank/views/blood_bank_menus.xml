@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="blood_bank_root_menu" name="Blood Bank">
+        <menuitem id="blood_bank_first_level_menu_inventory" name="Inventory">
+            <menuitem id="inventory_menu_action" action="inventory_blood_action"/>
+            <menuitem id="request_menu_action" action="request_blood_action"/>
+        </menuitem>
+
+         <menuitem id="blood_bank_first_level_menu_donation" name="Donation">
+            <menuitem id="donor_menu_action" action="donor_info_action"/>
+            <menuitem id="donation_menu_action" action="donation_info_action"/>
+        </menuitem>
+
+        <menuitem id="blood_bank_first_level_menu_transfusion" name="History">
+            <menuitem id="transfusion_menu_action" action="transfusion_blood_action"/>
+        </menuitem>
+    </menuitem>
+</odoo>

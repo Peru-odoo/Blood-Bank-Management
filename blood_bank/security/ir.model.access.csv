@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+blood_bank.access_donor_info,donor-info-access-rules,blood_bank.model_donor_info,base.group_user,1,1,1,1
+blood_bank.access_donation_info,donation-access-rules,blood_bank.model_donation_info,base.group_user,1,1,1,1
+blood_bank.access_request_blood,request-access-rules,blood_bank.model_request_blood,base.group_user,1,1,1,1
+blood_bank.access_inventory_blood,inventory-access-rules,blood_bank.model_inventory_blood,base.group_user,1,1,1,1
+blood_bank.access_transfusion_blood,transfusion-access-rules,blood_bank.model_transfusion_blood,base.group_user,1,1,1,1
