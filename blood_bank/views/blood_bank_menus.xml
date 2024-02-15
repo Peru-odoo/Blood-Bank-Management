@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <menuitem id="blood_bank_root_menu" name="Blood Bank">
+    <menuitem id="blood_bank_root_menu" name="Blood Bank" web_icon="blood_bank,static/description/blood_bank_icon.png">
         <menuitem id="blood_bank_first_level_menu_inventory" name="Inventory">
             <menuitem id="inventory_menu_action" action="inventory_blood_action"/>
             <menuitem id="request_menu_action" action="request_blood_action"/>

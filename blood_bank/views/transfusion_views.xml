@@ -12,4 +12,72 @@
           </p>
         </field>
     </record>
+
+    <!-- list/tree view -->
+    <record id="transfusion_blood_view_tree" model="ir.ui.view">
+      <field name="name">transfusion.blood.tree</field>
+      <field name="model">transfusion.blood</field>
+      <field name="arch" type="xml">
+          <tree string="Transfusion Blood List View">
+              <field name="hospital"/>
+              <field name="patient_name"/>
+              <field name="blood_group_transfused"/>
+              <field name="quantity_transfused"/>
+              <field name="date_tranfusion"/>
+          </tree>
+      </field>
+    </record>
+
+  <!-- form view -->
+    <record id="transfusion_blood_view_form" model="ir.ui.view">
+      <field name="name">transfusion.blood.form</field>
+      <field name="model">transfusion.blood</field>
+      <field name="arch" type="xml">
+          <form string="Transfusion Blood Form View">
+              <sheet>
+                <label for="hospital" string="Hospital Name:"></label>
+                <h1>
+                  <field name="hospital"/>
+                </h1>
+                  <group>
+                      <group>
+                          <field name="patient_name"/>
+                          <field name="blood_group_transfused"/>
+                      </group>
+                      <group>
+                          <field name="quantity_transfused"/>
+                          <field name="date_tranfusion"/>
+                          <field name="purpose_transfusion"/>
+                      </group>
+                  </group>
+              </sheet>
+              <div class="oe_chatter">
+                  <field name="message_follower_ids"/>
+                  <field name="activity_ids"/>
+                  <field name="message_ids"/>
+              </div>
+          </form>
+      </field>
+    </record>
+
+    <!-- search view -->
+    <record id="transfusion_blood_view_search" model="ir.ui.view">
+      <field name="name">transfusion.blood.search</field>
+      <field name="model">transfusion.blood</field>
+      <field name="arch" type="xml">
+          <search string="Transfusion Search View">
+             <field name="hospital"/>
+             <field name="patient_name"/>
+             <field name="blood_group_transfused"/>
+             <field name="date_tranfusion"/>
+             <separator/>
+             <group expand="1" string="Group By">
+                 <filter string="Hospital" name="hospital" context="{'group_by':'hospital'}"/>
+                 <filter string="Patient Name" name="patient_name" context="{'group_by':'patient_name'}"/>
+                 <filter string="Blood Group Transfused" name="blood_group_transfused" context="{'group_by':'blood_group_transfused'}"/>
+                 <filter string="Date of Transfusion" name="date_tranfusion" context="{'group_by':'date_tranfusion'}"/>
+             </group>
+          </search>
+      </field>
+    </record>
 </odoo>

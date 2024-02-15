@@ -1,7 +1,7 @@
 {
     'name': "blood bank",
     'version': '1.0',
-    'depends': ['base'],
+    'depends': ['base', 'mail'],
     'data':
         [
          'security/ir.model.access.csv',
@@ -15,5 +15,5 @@
     'author': "nihp-blood-bank",
     'application': True,
     'installable': True,
-    'liscense': 'LGPL-3',
+    'license': 'LGPL-3',
 }

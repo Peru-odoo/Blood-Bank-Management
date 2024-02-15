@@ -3,6 +3,8 @@ from odoo import api, fields, models
 class donationInfo(models.Model):
     _name = "donation.info"
     _description = "Donation Information"
+    _inherit = ['mail.thread', 'mail.activity.mixin']
+    _rec_name = "donation_center"
 
     name = fields.Char(required=True, string="Doner Name")
     donation_date = fields.Date(string="Donation Date")

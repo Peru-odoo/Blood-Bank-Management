@@ -3,9 +3,11 @@ from odoo import fields, models
 class inventoryBlood(models.Model):
     _name = "inventory.blood"
     _description = "Inventory Blood"
+    _inherit = ['mail.thread', 'mail.activity.mixin']
+    _rec_name = "location"
 
     blood_group = fields.Selection(
-        string="Blood Group Needed",
+        string="Blood Group",
         selection=[
             ('a_pos', 'A+'),
             ('a_neg', 'A-'),

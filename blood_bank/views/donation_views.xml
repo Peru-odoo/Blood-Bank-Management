@@ -12,4 +12,63 @@
           </p>
         </field>
     </record>
+
+    <!-- list/tree view -->
+    <record id="donation_info_view_tree" model="ir.ui.view">
+      <field name="name">donation.info.tree</field>
+      <field name="model">donation.info</field>
+      <field name="arch" type="xml">
+          <tree string="Donation Info List View">
+              <field name="name"/>
+              <field name="blood_group"/>
+              <field name="donation_date"/>
+              <field name="donation_center"/>
+          </tree>
+      </field>
+    </record>
+
+  <!-- form view -->
+    <record id="donation_info_view_form" model="ir.ui.view">
+      <field name="name">donation.info.form</field>
+      <field name="model">donation.info</field>
+      <field name="arch" type="xml">
+          <form string="Donation Info Form View">
+              <sheet>
+                  <group>
+                      <group>
+                          <field name="name"/>
+                          <field name="blood_group"/>
+                          <field name="quantity"/>
+                      </group>
+                      <group>
+                        <field name="donation_date"/>
+                        <field name="donation_center"/>
+                      </group>
+                  </group>
+              </sheet>
+              <div class="oe_chatter">
+                  <field name="message_follower_ids"/>
+                  <field name="activity_ids"/>
+                  <field name="message_ids"/>
+              </div>
+          </form>
+      </field>
+    </record>
+
+     <!-- search view -->
+     <record id="donation_info_view_search" model="ir.ui.view">
+      <field name="name">donation.info.search</field>
+      <field name="model">donation.info</field>
+      <field name="arch" type="xml">
+          <search string="Donation Info Search View">
+             <field name="donation_center"/>
+             <field name="donation_date"/>
+             <separator/>
+             <group expand="1" string="Group By">
+                 <filter string="Donation Centre" name="donation_center" context="{'group_by':'donation_center'}"/>
+                 <filter string="Donaion Date" name="donation_date" context="{'group_by':'donation_date'}"/>
+             </group>
+          </search>
+      </field>
+    </record>
 </odoo>

@@ -3,6 +3,8 @@ from odoo import fields, models
 class requestBlood(models.Model):
     _name = "request.blood"
     _description = "Request Blood"
+    _inherit = ['mail.thread', 'mail.activity.mixin']
+    _rec_name = "hospital"
 
     patient_name = fields.Char(required=True, string="Patient Name")
     blood_group = fields.Selection(

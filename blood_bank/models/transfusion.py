@@ -3,6 +3,8 @@ from odoo import fields, models
 class transfusionBlood(models.Model):
     _name = "transfusion.blood"
     _description = "Transfusion Blood"
+    _inherit = ['mail.thread', 'mail.activity.mixin']
+    _rec_name = "hospital"
 
     patient_name = fields.Char(required=True, string="Patient Name")
     blood_group_transfused = fields.Selection(
@@ -21,5 +23,5 @@ class transfusionBlood(models.Model):
     )
     date_tranfusion = fields.Date(required=True, string="Date of Transfusion")
     hospital = fields.Char(required=True, string="Hospital's Name")
-    quantity_req = fields.Float(required=True, string="Blood Quantity Required (ml)")
+    quantity_transfused = fields.Float(required=True, string="Blood Transfused (ml)")
     purpose_transfusion = fields.Char(string="Purpose of Tranfusion")

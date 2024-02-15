@@ -3,6 +3,8 @@ from odoo import fields, models
 class donorInfo(models.Model):
     _name = "donor.info"
     _description = "Donor Information"
+    _inherit = ['mail.thread', 'mail.activity.mixin']
+    _rec_name = "name"
 
     name = fields.Char(required=True)
     blood_group = fields.Selection(
@@ -21,5 +23,5 @@ class donorInfo(models.Model):
     )
     age = fields.Integer(required=True)
     weight = fields.Float(string="Weight (kg)", required=True)
-    last_doneted = fields.Date(string="Last Donted On")
+    last_donated = fields.Date(string="Last Donted On")
     report = fields.Binary()
