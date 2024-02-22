@@ -3,3 +3,4 @@ from . import donation
 from . import request
 from . import inventory
 from . import transfusion
+from . import location

@@ -22,4 +22,4 @@ class inventoryBlood(models.Model):
     )
     quantity_inventory = fields.Float(string="Quantity (l)", required=True, default=0)
     expiry = fields.Date(string='Expiry Date', required=True)
-    location = fields.Char(string='Location')
+    location = fields.Many2one('location.blood', string='Location')

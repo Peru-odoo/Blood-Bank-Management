@@ -4,3 +4,4 @@ blood_bank.access_donation_info,donation-access-rules,blood_bank.model_donation_
 blood_bank.access_request_blood,request-access-rules,blood_bank.model_request_blood,base.group_user,1,1,1,1
 blood_bank.access_inventory_blood,inventory-access-rules,blood_bank.model_inventory_blood,base.group_user,1,1,1,1
 blood_bank.access_transfusion_blood,transfusion-access-rules,blood_bank.model_transfusion_blood,base.group_user,1,1,1,1
+blood_bank.access_location_blood,location-access-rules,blood_bank.model_location_blood,base.group_user,1,1,1,1
