@@ -6,7 +6,7 @@
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
           <p class="o_view_nocontent_smiling_face">
-            No Transfusion Donation Record found!!
+            No Transfusion Record found!!
           </p><p>
             Please add some already :)
           </p>
@@ -45,10 +45,23 @@
                           <field name="blood_group_transfused"/>
                       </group>
                       <group>
-                          <field name="quantity_transfused"/>
-                          <field name="date_tranfusion"/>
-                          <field name="purpose_transfusion"/>
+                          <field name="aadhar_no"/>
                       </group>
+                      <notebook>
+                        <page string="Medical Info">
+                          <group>
+                            <field name="age"/>
+                            <field name="weight"/>
+                          </group>
+                        </page>
+                        <page string="Transfusion Details">
+                          <group>
+                            <field name="quantity_transfused"/>
+                            <field name="date_tranfusion"/>
+                            <field name="purpose_transfusion"/>
+                            </group>
+                        </page>
+                    </notebook>
                   </group>
               </sheet>
               <div class="oe_chatter">

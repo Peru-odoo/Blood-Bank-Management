@@ -39,13 +39,24 @@
                       <group>
                           <field name="name"/>
                           <field name="blood_group"/>
-                          <field name="report" widget="binary" filename="Attachment" string="Report"/>
                       </group>
                       <group>
-                        <field name="age"/>
-                        <field name="weight"/>
-                        <field name="last_donated"/>
+                          <field name="aadhar_no"/>
+                          <field name="last_donated"/>
                       </group>
+                      <notebook>
+                          <page string="Medical Info">
+                              <group>
+                                  <field name="age"/>
+                                  <field name="weight"/>
+                              </group>
+                          </page>
+                          <page string="Report">
+                              <group>
+                                  <field name="report" widget="binary" filename="Attachment" string="Report"/>
+                              </group>
+                          </page>
+                      </notebook>
                   </group>
               </sheet>
               <div class="oe_chatter">

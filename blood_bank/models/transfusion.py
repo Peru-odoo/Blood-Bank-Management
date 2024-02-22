@@ -21,7 +21,10 @@ class transfusionBlood(models.Model):
         ],
         required=True,
     )
+    age = fields.Integer(required=True)
+    weight = fields.Float(string="Weight (kg)", required=True)
     date_tranfusion = fields.Date(required=True, string="Date of Transfusion")
     hospital = fields.Char(required=True, string="Hospital's Name")
     quantity_transfused = fields.Float(required=True, string="Blood Transfused (ml)")
     purpose_transfusion = fields.Char(string="Purpose of Tranfusion")
+    aadhar_no = fields.Char(required=True, copy=False)

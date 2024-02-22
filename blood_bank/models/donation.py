@@ -1,4 +1,5 @@
 from odoo import api, fields, models
+from odoo.exceptions import UserError
 
 class donationInfo(models.Model):
     _name = "donation.info"
@@ -25,9 +26,7 @@ class donationInfo(models.Model):
     donation_center = fields.Char(string="Donation Center")
     quantity = fields.Float(string="Blood Donated (ml)", required=True)
 
-    @api.onchange('donation_date', 'donation_center')
+    @api.onchange('donation_date')
     def _onchange_donation_fields(self):
-        if self.donation_date:
-            return {'required': {'donation_center': True}}
-        else:
-            return {'required': {'donation_center': False, 'donation_center': False}}
+        if self.donation_date and not self.donation_center:
+            raise UserError ("Please specify donation centre first")

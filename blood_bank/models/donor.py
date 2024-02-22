@@ -25,3 +25,4 @@ class donorInfo(models.Model):
     weight = fields.Float(string="Weight (kg)", required=True)
     last_donated = fields.Date(string="Last Donted On")
     report = fields.Binary()
+    aadhar_no = fields.Char(required=True, copy=False)
