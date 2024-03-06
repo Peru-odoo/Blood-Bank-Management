@@ -4,7 +4,7 @@
         <menuitem id="blood_bank_first_level_menu_inventory" name="Inventory">
             <menuitem id="inventory_menu_action" action="inventory_blood_action"/>
             <menuitem id="request_menu_action" action="request_blood_action"/>
-            <!-- <menuitem id="location_menu_action" action="location_blood_action"/> -->
+            <menuitem id="location_menu_action" action="location_blood_action"/>
         </menuitem>
 
          <menuitem id="blood_bank_first_level_menu_donation" name="Donation">

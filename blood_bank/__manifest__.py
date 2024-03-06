@@ -10,6 +10,7 @@
          'views/inventory_views.xml',
          'views/request_views.xml',
          'views/transfusion_views.xml',
+         'views/location_views.xml',
          'views/blood_bank_menus.xml',
         ],
     'author': "nihp-blood-bank",

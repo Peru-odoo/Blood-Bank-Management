@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="location_blood_action" model="ir.actions.act_window">
-        <field name="name">Location_</field>
-        <field name="res_model">location_.blood</field>
+        <field name="name">Location</field>
+        <field name="res_model">location.blood</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
           <p class="o_view_nocontent_smiling_face">
@@ -18,24 +18,9 @@
         <field name="name">location.blood.tree</field>
         <field name="model">location.blood</field>
         <field name="arch" type="xml">
-            <tree string="Location Blood List View" editable="top">
+            <tree string="Location Blood List View" editable="bottom">
                 <field name="name"/>
             </tree>
-        </field>
-    </record>
-
-    <!-- Form view -->
-    <record id="location_blood_form_view" model="ir.ui.view">
-        <field name="name">blood.bank.location.form</field>
-        <field name="model">blood.bank.location</field>
-        <field name="arch" type="xml">
-            <form string="Blood Bank Location">
-                <sheet>
-                    <group>
-                        <field name="name"/>
-                    </group>
-                </sheet>
-            </form>
         </field>
     </record>
 </odoo>
